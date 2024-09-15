@@ -65,13 +65,11 @@ export class ProductosComponent implements OnInit, AfterViewInit {
     this.applyFilter(this.filtroBusqueda);
   }
 
-  // Aplicar filtro a los productos
   applyFilter(filtro: string): void {
     filtro = filtro.trim().toLowerCase();
     this.dataSource.filter = filtro;
   }
 
-  // Filtro personalizado para buscar por nombre, descripción, precio o cantidad
   crearFiltroPersonalizado(): (producto: Producto, filtro: string) => boolean {
     return (producto: Producto, filtro: string): boolean => {
       const dataStr = `${producto.nombre?.toLowerCase()} ${producto.descripcion?.toLowerCase()} ${producto.precio} ${producto.cantidad}`;

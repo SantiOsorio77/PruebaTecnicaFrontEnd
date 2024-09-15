@@ -5,10 +5,7 @@ import { ProductosService } from '../../services/productos.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PedidosService } from '../../services/Pedidos.service';
-
-import Swal from 'sweetalert2';  // Importamos SweetAlert2
-
-
+import Swal from 'sweetalert2';  
 @Component({
   standalone: true,
   selector: 'app-pedidos',
@@ -20,7 +17,7 @@ export class PedidosComponent implements OnInit {
 
   productos: Producto[] = [];
   pedidos: Pedidos[] = [];
-  cantidadesSeleccionadas: { [productoId: number]: number } = {};  // Objeto para almacenar las cantidades ingresadas por el usuario
+  cantidadesSeleccionadas: { [productoId: number]: number } = {};  
 
   constructor(
     private pedidosService: PedidosService,
@@ -51,7 +48,7 @@ export class PedidosComponent implements OnInit {
   }
 
   realizarPedido(producto: Producto): void {
-    const cantidad = this.cantidadesSeleccionadas[producto.id] || 0;  // Obtenemos la cantidad seleccionada por el usuario
+    const cantidad = this.cantidadesSeleccionadas[producto.id] || 0;  
 
     if (cantidad < 1) {
       this.mostrarError('La cantidad debe ser mayor a 0');
@@ -59,10 +56,10 @@ export class PedidosComponent implements OnInit {
     }
 
     const nuevoPedido: Pedidos = {
-      id: 0,  // El ID será generado automáticamente por el backend
-      fecha: new Date(),  // Fecha actual
+      id: 0,  
+      fecha: new Date(),  
       producto: producto,
-      cantidad: cantidad,  // Usamos la cantidad seleccionada por el usuario
+      cantidad: cantidad,  
       total: producto.precio * cantidad
     };
 
@@ -70,7 +67,7 @@ export class PedidosComponent implements OnInit {
       (pedido) => {
         console.log('Pedido creado:', pedido);
         this.mostrarExito('Pedido realizado con éxito');
-        this.cargarPedidos();  // Actualizar la lista de pedidos
+        this.cargarPedidos();  
       },
       (error) => {
         console.error('Error al crear el pedido:', error);
@@ -79,7 +76,6 @@ export class PedidosComponent implements OnInit {
     );
   }
 
-  // Eliminar un pedido
   eliminarPedido(id: number): void {
     Swal.fire({
       title: '¿Estás seguro?',
@@ -103,7 +99,6 @@ export class PedidosComponent implements OnInit {
     });
   }
 
-  // Funciones para mostrar alertas amigables con SweetAlert2
   mostrarExito(mensaje: string): void {
     Swal.fire({
       icon: 'success',

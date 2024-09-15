@@ -11,14 +11,12 @@
         </div>
       </div>
   
-      <!-- Botón Agregar Producto -->
       <div class="d-flex justify-content-end mt-5">
         <button class="btn btn-agregar" type="button" (click)="abrirModalAgregar()">
           <strong>Agregar producto</strong>
         </button>
       </div>
   
-      <!-- Tabla de Productos -->
       <div class="table-responsive mb-4">
         <table mat-table [dataSource]="dataSource" class="table" matSort aria-label="Tabla de productos">
           <ng-container matColumnDef="nombre">

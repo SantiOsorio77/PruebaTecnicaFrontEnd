@@ -19,7 +19,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class EditarProductoComponent implements OnInit {
   productoForm: FormGroup;
-  @Input() producto!: Producto; // Producto que se va a editar
+  @Input() producto!: Producto; 
   @ViewChild('modalContainer', { static: true }) modalContainer!: ElementRef;
 
   constructor(
@@ -36,7 +36,6 @@ export class EditarProductoComponent implements OnInit {
   }
 
   ngOnInit() {
-    // Cargar los valores del producto seleccionado en el formulario
     if (this.producto) {
       this.productoForm.patchValue({
         nombre: this.producto.nombre,
@@ -60,8 +59,8 @@ export class EditarProductoComponent implements OnInit {
     }
 
     const productoActualizado: Producto = {
-      ...this.producto, // Mantenemos el ID y otros atributos originales
-      ...this.productoForm.value // Actualizamos los valores con el formulario
+      ...this.producto, 
+      ...this.productoForm.value 
     };
 
     console.log('Datos del producto actualizado:', productoActualizado);

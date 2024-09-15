@@ -1,7 +1,6 @@
 <div class="container mt-4">
     <h1 class="text-center mb-4">Gestionar Pedido</h1>
   
-    <!-- Mostrar productos para seleccionar -->
     <div class="row mb-4">
       <div class="col-12">
         <h3>Catálogo de Productos</h3>
@@ -21,7 +20,6 @@
               <td>{{ producto.descripcion }}</td>
               <td>{{ producto.precio | currency }}</td>
               <td>
-                <!-- Usamos el objeto cantidadesSeleccionadas para almacenar la cantidad ingresada por el usuario -->
                 <input type="number" class="form-control" [(ngModel)]="cantidadesSeleccionadas[producto.id]" placeholder="Ingrese cantidad" min="1">
               </td>
               <td>
@@ -33,7 +31,6 @@
       </div>
     </div>
   
-    <!-- Mostrar pedidos realizados -->
     <div class="row">
       <div class="col-12">
         <h3>Pedidos Realizados</h3>

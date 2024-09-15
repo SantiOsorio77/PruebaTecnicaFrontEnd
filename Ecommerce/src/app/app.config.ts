@@ -7,8 +7,8 @@
 
   export const appConfig: ApplicationConfig = {
     providers: [
-      provideRouter(routes),      // Proporcionar las rutas de la aplicación
-      provideHttpClient(),        // Proporcionar HttpClient para las solicitudes HTTP
-      provideAnimationsAsync()    // Proporcionar animaciones de forma asíncrona
+      provideRouter(routes),      
+      provideHttpClient(),        
+      provideAnimationsAsync()   
     ]
   };

@@ -1,23 +1,20 @@
-/* Fondo del modal con bordes redondeados */
 .modal-content {
-    border-radius: 30px; /* Redondeamos todo el modal */
+    border-radius: 30px; 
     background-color: #ffffff;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);  /* Sombra suave */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);  
     padding: 1.5rem;
   outline: none;}
   
-  /* Estilo del encabezado del modal */
   .modal-header {
     padding: 15px;
-    border-bottom: none;  /* Quitamos el borde inferior */
+    border-bottom: none; 
     justify-content: center;
-    background-color: #f1f7fd; /* Fondo claro */
-    border-top-left-radius: 30px;  /* Redondeamos el encabezado */
+    background-color: #f1f7fd; 
+    border-top-left-radius: 30px;  
     border-top-right-radius: 30px;
-    overflow: hidden; /* Evita cualquier borde visible en las esquinas */
+    overflow: hidden; 
   }
   
-  /* Título del modal */
   .modal-title {
     margin: 0;
     font-size: 1.75rem; 
@@ -25,44 +22,41 @@
     color: #004884;
   }
   
-  /* Cuerpo del modal */
   .modal-body {
     position: relative;
     padding: 15px;
     background-color: #f9fcff;
   }
-  /* Estilo de los campos del formulario */
   .form-control,
   .form-select {
     display: block;
     width: 100%;
-    padding: 0.75rem;  /* Aumentamos el padding */
+    padding: 0.75rem;  
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
     background-color: #fff;
     border: 1px solid #ced4da;
-    border-radius: 10px;  /* Bordes redondeados */
+    border-radius: 10px;  
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
   
   .form-control:focus {
     border-color: #80bdff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);  /* Sombra al enfocar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);  
   }
   
-  /* Estilo del pie del modal */
+
   .modal-footer {
     padding: 15px;
-    border-top: none;  /* Quitamos el borde superior */
+    border-top: none;  
     justify-content: flex-end;
     background-color: #f1f7fd;
-    border-bottom-left-radius: 30px;  /* Redondeamos el pie del modal */
+    border-bottom-left-radius: 30px;  
     border-bottom-right-radius: 30px;
    
   }
   
-  /* Botón Guardar */
   .btn-guardar {
     background-color: #005CBB;
     color: white;
@@ -77,10 +71,9 @@
   
   .btn-guardar:hover {
     background-color: #00408a;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Sombra en hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
   }
   
-  /* Botón Cancelar */
   .btn-cancelar {
     font-size: 16px;
     font-weight: 550;
@@ -98,7 +91,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Validación de formularios */
   .ng-valid:not(form).ng-touched {
     border-left: 5px solid #42A948;
   }
@@ -107,7 +99,6 @@
     border-left: 5px solid #a94442;
   }
   
-  /* Ocultar botones de incremento en campos numéricos */
   input[type='number']::-webkit-inner-spin-button,
   input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
