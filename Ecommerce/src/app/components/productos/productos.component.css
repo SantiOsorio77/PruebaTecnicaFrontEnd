@@ -1,0 +1,94 @@
+/* Fondo con un degradado suave */
+body {
+  background: linear-gradient(to right, #b3e5fc, #b2dfdb); /* Degradado de azul claro a verde suave */
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* Fondo con una imagen sutil y efecto de transparencia */
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.9; /* Controla la transparencia del fondo */
+}
+input{
+  outline: none;
+  width: 100%;
+}
+.container-fluid {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+
+.btn-agregar {
+  width: 167px;
+  height: 42px;
+  background-color: #8e44ad; 
+  color: #FFFFFF;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #7d3c98;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  border-radius: 4rem;
+  border: 1px solid #DEE2E6;
+  width: 100%;
+  height: 56px;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el campo de búsqueda */
+  background-color: #fff;
+}
+
+h1 {
+  color: #357abd;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: center;
+  color: #004d61;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f1f8e9; 
+  font-weight: bold;
+}
+
+.table td {
+  background-color: #fafafa;
+}
+
+.table-responsive {
+  margin-top: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}

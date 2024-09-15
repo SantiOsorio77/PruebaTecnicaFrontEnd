@@ -1,0 +1,158 @@
+/* General */
+body {
+    background-color: #f4f7f6;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Subtítulo de la tabla */
+h3 {
+    color: #16a085;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Tabla */
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.table thead th {
+    background-color: #16a085;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+}
+
+.table tbody td {
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #ecf0f1;
+}
+
+.table tbody tr:hover {
+    background-color: #dff0d8;
+}
+
+/* Inputs */
+input[type="number"] {
+    width: 80px;
+    padding: 6px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #16a085;
+    box-shadow: 0 0 8px rgba(22, 160, 133, 0.4);
+    outline: none;
+}
+
+/* Botones */
+.btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-success {
+    background-color: #27ae60;
+    color: white;
+    box-shadow: 0 4px 8px rgba(39, 174, 96, 0.2);
+}
+
+.btn-success:hover {
+    background-color: #2ecc71;
+    box-shadow: 0 8px 16px rgba(39, 174, 96, 0.4);
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.2);
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    box-shadow: 0 8px 16px rgba(231, 76, 60, 0.4);
+}
+
+/* Resaltado de filas */
+tbody tr td button {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .table thead, .table tbody, .table th, .table td, .table tr {
+        display: block;
+    }
+    
+    .table thead {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .table tr {
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+    }
+    
+    .table td {
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+    
+    .table td:before {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #16a085;
+    }
+    
+    .table td:nth-of-type(1):before { content: "Nombre"; }
+    .table td:nth-of-type(2):before { content: "Descripción"; }
+    .table td:nth-of-type(3):before { content: "Precio"; }
+    .table td:nth-of-type(4):before { content: "Cantidad"; }
+    .table td:nth-of-type(5):before { content: "Acción"; }
+}
