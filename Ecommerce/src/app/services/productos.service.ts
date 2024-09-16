@@ -17,11 +17,7 @@ export class ProductosService {
       .pipe(catchError(this.manejarError));
   }
 
-  obtenerProductoPorId(id: number): Observable<Producto> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.get<Producto>(url)
-      .pipe(catchError(this.manejarError));
-  }
+  
 
 
   guardarProducto(producto: Producto): Observable<Producto> {

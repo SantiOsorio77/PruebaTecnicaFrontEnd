@@ -1,11 +1,29 @@
-<div class="home-container">
-  <div class="welcome-banner">
-    <h1>¡Bienvenido a Nuestra Tienda!</h1>
-    <p>Selecciona una opción para continuar:</p>
-  </div>
-  
-  <div class="menu-container">
-    <button class="menu-btn" routerLink="/productos">Ver Productos</button>
-    <button class="menu-btn" routerLink="/pedidos">Ver Pedidos</button>
+<div class="login-box" *ngIf="!isLoggedIn">
+  <h2>Iniciar Sesión</h2>
+  <form (ngSubmit)="login()">
+    <div class="user-box">
+      <input type="text" name="username" [(ngModel)]="userName" required />
+      <label>Nombre de usuario</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" [(ngModel)]="password" required />
+      <label>Contraseña</label>
+    </div>
+    <a href="#" (click)="login()">
+      <span></span>
+      Iniciar Sesión
+    </a>
+  </form>
+</div>
+
+<div *ngIf="isLoggedIn" [ngClass]="userRole === 'admin' ? 'admin-view' : 'user-view'">
+  <div class="menu-card">
+    <h3>Menú {{ userRole === 'admin' ? 'de Administrador' : 'de Usuario' }}</h3>
+    <p>¡Hola {{ userName }}! Elige una opción para continuar:</p>
+    <div class="menu-container">
+      <button class="btn btn-outline-primary" routerLink="/productos">Ver Productos</button>
+      <button *ngIf="isAdmin()" class="btn btn-outline-primary" routerLink="/pedidos">Ver Pedidos</button>
+      <button class="btn btn-danger" (click)="logout()">Cerrar sesión</button>
+    </div>
   </div>
 </div>
