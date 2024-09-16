@@ -3,12 +3,12 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Producto } from '../models/producto.model';
-
+import { enviroment } from '../environment/enviroment';
 @Injectable({
   providedIn: 'root'
 })
 export class ProductosService {
-  private apiUrl = 'http://localhost:9000/api/productos';  
+  private apiUrl = enviroment.apiUrl; 
 
   constructor(private http: HttpClient) { }
 
@@ -16,9 +16,6 @@ export class ProductosService {
     return this.http.get<Producto[]>(this.apiUrl)
       .pipe(catchError(this.manejarError));
   }
-
-  
-
 
   guardarProducto(producto: Producto): Observable<Producto> {
     return this.http.post<Producto>(this.apiUrl, producto)
